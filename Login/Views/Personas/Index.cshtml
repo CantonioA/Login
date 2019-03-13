@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Login.Models.Persona>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Personas</h2>
+
+<p>
+    <a asp-action="Create">Crear nuevo usuario</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+               NOMBRE
+            </th>
+            <th>
+               APELLIDO
+            </th>
+            <th>
+          USUARIO
+            </th>
+            <th>
+                CONTRASEÑA
+            </th>
+            <th>
+             NIVEL
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NOMPER)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.APEPER)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.USUPER)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CONPER)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem =>(item.NIVPER))
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.DNIPER">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.DNIPER">Detalles</a> |
+                <a asp-action="Delete " asp-route-id="@item.DNIPER">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

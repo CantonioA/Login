@@ -1,0 +1,48 @@
+﻿@model Login.Models.Persona
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Persona</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NOMPER)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NOMPER)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.APEPER)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.APEPER)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.USUPER)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.USUPER)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CONPER)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CONPER)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NIVPER)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NIVPER)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.DNIPER">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
